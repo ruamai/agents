@@ -1,0 +1,15 @@
+{
+  "name": "ruam",
+  "description": "Ruam's plugins for Claude Code.",
+  "owner": {
+    "name": "Kratuva Inc.",
+    "url": "https://ruam.ai"
+  },
+  "plugins": [
+    {
+      "name": "ruam",
+      "source": "./plugins/ruam",
+      "description": "Opens a Ruam run when you give Claude Code a task."
+    }
+  ]
+}

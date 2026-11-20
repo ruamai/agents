@@ -1,0 +1,12 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "ruam",
+  "displayName": "Ruam",
+  "version": "0.1.0",
+  "description": "Logs each task your Antigravity agent does as a Ruam run: its goal, short updates, what it delivered and its token counts. Add Ruam and sign in first (mcp.ruam.ai/agent).",
+  "suggestedPrompts": ["Start a Ruam run for this task"],
+  "author": { "name": "Kratuva Inc.", "url": "https://ruam.ai" },
+  "homepage": "https://help.ruam.ai",
+  "license": "MIT",
+  "keywords": ["ruam", "time", "runs"]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ruam",
+  "interface": {
+    "displayName": "Ruam"
+  },
+  "plugins": [
+    {
+      "name": "ruam",
+      "source": "./plugins/ruam-codex",
+      "description": "Opens a Ruam run when you give Codex a task, with its token counts."
+    }
+  ]
+}

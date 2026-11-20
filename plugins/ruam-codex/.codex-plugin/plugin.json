@@ -1,0 +1,14 @@
+{
+  "name": "ruam",
+  "version": "0.1.0",
+  "description": "Opens a Ruam run when you give Codex a task, with its token counts, and closes it when Codex finishes its reply. Needs Ruam added and signed in first (codex mcp add ruam --url https://mcp.ruam.ai/agent, then codex mcp login ruam).",
+  "keywords": ["ruam", "time", "runs"],
+  "interface": {
+    "displayName": "Ruam",
+    "shortDescription": "Logs each Codex task as a Ruam run, with its token counts.",
+    "developerName": "Kratuva Inc.",
+    "category": "Productivity",
+    "websiteURL": "https://ruam.ai",
+    "privacyPolicyURL": "https://ruam.ai/privacy"
+  }
+}

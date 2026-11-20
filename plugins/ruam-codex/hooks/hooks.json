@@ -1,0 +1,50 @@
+{
+  "description": "Ruam: open a run when you give Codex a task, send each model request's token counts, and close the run when Codex finishes its reply.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "ruam",
+            "tool": "start_run",
+            "input": { "session_id": "${session_id}" },
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostModelRequest": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "ruam",
+            "tool": "record_usage",
+            "input": {
+              "session_id": "${session_id}",
+              "request_id": "${request_id}",
+              "attempt_number": "${attempt_number}",
+              "model": "${model}",
+              "token_usage": "${token_usage}"
+            },
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "ruam",
+            "tool": "end_session",
+            "input": { "session_id": "${session_id}" },
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

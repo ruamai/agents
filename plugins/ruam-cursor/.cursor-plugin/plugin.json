@@ -1,0 +1,15 @@
+{
+  "name": "ruam",
+  "displayName": "Ruam",
+  "version": "0.1.0",
+  "description": "Opens a Ruam run when you give Cursor a task and closes it when the session ends. Sends ids and counts only. Needs Ruam added and signed in first (Settings, MCP: https://mcp.ruam.ai/agent) and this computer's hook key from Ruam's Connect Cursor page.",
+  "author": {
+    "name": "Kratuva Inc.",
+    "url": "https://ruam.ai"
+  },
+  "homepage": "https://help.ruam.ai",
+  "license": "MIT",
+  "keywords": ["ruam", "time", "runs"],
+  "rules": "./rules",
+  "hooks": "./hooks/hooks.json"
+}

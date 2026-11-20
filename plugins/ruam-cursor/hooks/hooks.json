@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [{ "command": "node ./hooks/ruam-hook.mjs start", "timeout": 5 }],
+    "afterAgentResponse": [{ "command": "node ./hooks/ruam-hook.mjs usage", "timeout": 5 }],
+    "stop": [{ "command": "node ./hooks/ruam-hook.mjs stop", "timeout": 5 }],
+    "sessionEnd": [{ "command": "node ./hooks/ruam-hook.mjs end", "timeout": 5 }]
+  }
+}

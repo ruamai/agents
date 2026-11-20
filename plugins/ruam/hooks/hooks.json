@@ -1,0 +1,31 @@
+{
+  "description": "Ruam: open a run for this Claude Code session when a task starts, and close it when the session ends.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "ruam",
+            "tool": "start_run",
+            "input": { "session_id": "${session_id}" },
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "ruam",
+            "tool": "end_session",
+            "input": { "session_id": "${session_id}" },
+            "timeout": 1.5
+          }
+        ]
+      }
+    ]
+  }
+}

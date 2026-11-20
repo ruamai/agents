@@ -1,0 +1,15 @@
+{
+  "name": "ruam",
+  "description": "Ruam's plugin for Cursor.",
+  "owner": {
+    "name": "Kratuva Inc.",
+    "url": "https://ruam.ai"
+  },
+  "plugins": [
+    {
+      "name": "ruam",
+      "source": "./plugins/ruam-cursor",
+      "description": "Opens a Ruam run when you give Cursor a task, and closes it when the session ends."
+    }
+  ]
+}
